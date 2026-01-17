@@ -2,7 +2,11 @@
 
 for the [Fabula Ultima](https://need.games/fabula-ultima/) tabletop RPG
 
-**For more info, please visit our Github Pages site [here](#TODO).**
+---
+
+**For more info, please visit our [Github Pages site](https://toadslick.github.io/fabulously-fast-character-sheets/).**
+
+---
 
 This is an independent production and is not affiliated with Need Games or Rooster Games.
 

@@ -2,10 +2,12 @@ import path from "node:path";
 import * as sass from "sass";
 import metagen from "eleventy-plugin-metagen";
 import hamlPlugin from "@11ty/eleventy-plugin-haml";
+import { HtmlBasePlugin } from "@11ty/eleventy";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("images");
 
+  eleventyConfig.addPlugin(HtmlBasePlugin);
   eleventyConfig.addPlugin(metagen);
   eleventyConfig.addPlugin(hamlPlugin);
 

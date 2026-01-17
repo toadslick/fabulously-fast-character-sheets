@@ -12,7 +12,7 @@ footer: This character sheet is an independent production and is not affiliated 
 
 for the [Fabula Ultima](https://need.games/fabula-ultima/) tabletop RPG
 
-#### [Download from Github](#TODO)
+#### [Download from Github](https://github.com/toadslick/fabulously-fast-character-sheets/releases)
 
 </div>
 <div id="content">
@@ -119,7 +119,7 @@ Not at this time. We think the playtest changes to the core rules are entirely p
 
 ### What should I do if I've found a mistake in your materials?
 
-We're happy to fix any errors we've made. After all, we use these documents in our own games! Please [submit a bug report](#TODO) with the details and let us know if you'd like to be credited in the changelog for reporting the error.
+We're happy to fix any errors we've made. After all, we use these documents in our own games! Please [submit an issue report](https://github.com/toadslick/fabulously-fast-character-sheets/issues) with the details and let us know if you'd like to be credited in the changelog for reporting the error.
 
 </div>
 </div>
