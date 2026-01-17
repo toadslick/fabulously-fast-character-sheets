@@ -1,0 +1,36 @@
+---
+author: James Childress
+custom: [
+  {tag: 'meta', attrs: {name: 'theme-color', content: 'rgb(48,53,59)'}}
+]
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    {% metagen
+    title = title,
+    author = author,
+    desc = description,
+    comments = true,
+    css = ["/styles/main.css"],
+    custom = custom
+ %}
+  </head>
+  <body>
+    <main>
+      {{ content | safe }}
+    </main>
+    <footer>
+      <div>
+        <p>This website is an independent production and is not affiliated with Need Games or Rooster Games.</p>
+        <p>Published under the <a href="https://need.games/wp-content/uploads/2024/06/Fabula-Ultima-Third-Party-Tabletop-License-1.0.pdf">Fabula Ultima Third Party Tabletop License 1.0</a>.</p>
+        <p>
+          <a href="https://need.games/fabula-ultima/">Fabula Ultima</a>
+          is a roleplaying game created by Emanuele Galletto and published by Need Games.
+        </p>
+        <p>Fabula Ultima is © Need Games and Rooster Games.</p>
+      </div>
+    </footer>
+  </body>
+</html>

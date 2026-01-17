@@ -1,0 +1,324 @@
+@use "_wrapper";
+
+$heading-font:
+  "PT Sans Narrow", "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+
+$body-font:
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  Oxygen,
+  Ubuntu,
+  Cantarell,
+  "Open Sans",
+  "Helvetica Neue",
+  sans-serif;
+
+$max-width: 800px;
+$margin: 20px;
+
+@mixin margin {
+  max-width: $max-width;
+  margin: 20px auto;
+
+  @media (max-width: ($max-width + ($margin * 2))) {
+    margin: 20px;
+  }
+}
+
+#hero {
+  font-family: $heading-font;
+  line-height: 1;
+  padding: 70px 20px;
+  margin: 0 auto 20px auto;
+  background: center / cover no-repeat url("/images/hero.jpg");
+
+  border-bottom: 1px solid #fff3;
+
+  h1 {
+    text-align: center;
+    font-size: 48pt;
+    text-shadow: 0 2px 5px #000;
+
+    strong {
+      font-size: 56pt;
+      text-transform: uppercase;
+      white-space: pre-line;
+      font-weight: bold;
+
+      &::before {
+        content: "\a";
+        display: inline;
+      }
+    }
+  }
+
+  p {
+    font-family: $heading-font;
+    text-align: center;
+    font-size: 24pt;
+    color: #fffc;
+    line-height: 1;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      text-shadow: 0 2px 2px #0008;
+      border-bottom: 1px solid #fff4;
+      font-weight: bold;
+    }
+  }
+
+  h4 {
+    display: block;
+    margin-top: 40px;
+
+    a {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      font-family: $body-font;
+      font-size: 16pt;
+      font-weight: 500;
+      margin: auto;
+      max-width: 300px;
+      text-align: center;
+      background-color: rgba(255, 0, 128, 0.5);
+      box-shadow:
+        0 3px 10px pink inset,
+        0 5px 10px #0006;
+      border-radius: 100px;
+      border: 1px solid #fffa;
+      padding: 15px 20px;
+      text-shadow: 0 -1px 2px #000;
+      backdrop-filter: blur(5px);
+
+      &:hover,
+      &:focus {
+        background-color: rgba(255, 0, 128, 0.7);
+      }
+    }
+  }
+
+  @media (max-width: $max-width) {
+    h1 {
+      font-size: 36pt;
+      strong {
+        font-size: 42pt;
+      }
+    }
+    p {
+      font-size: 18pt;
+    }
+  }
+}
+
+h2,
+footer {
+  display: block;
+  background: linear-gradient(
+      -110deg,
+      rgb(116, 48, 100) 0%,
+      rgb(80, 88, 99) 50%,
+      rgb(87, 126, 86) 100%
+    )
+    fixed;
+  box-shadow: 0 0 20px #0007;
+  border-bottom: 1px solid #fff4;
+  border-top: 1px solid #fff4;
+}
+
+h2 {
+  font-family: $heading-font;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 0 2px 2px #000;
+  font-size: 36pt;
+  text-align: center;
+  padding: 5px 20px 3px;
+}
+
+footer {
+  margin-top: 40px;
+  div {
+    @include margin();
+  }
+  p {
+    font-size: 10pt;
+    color: #fffc;
+    line-height: 1.5;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 1px solid #fff6;
+    }
+  }
+}
+
+h3 {
+  @include margin();
+
+  font-family: $heading-font;
+  font-weight: 500;
+  text-shadow: 0 2px 2px #000;
+  font-size: 24pt;
+  text-align: center;
+
+  p + & {
+    border-top: 1px solid #fff3;
+    padding-top: 20px;
+  }
+}
+
+#content {
+  p,
+  ul {
+    @include margin();
+
+    line-height: 1.5;
+    font-family: $body-font;
+    font-size: 14pt;
+
+    a {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      text-shadow: 0 2px 2px #0008;
+      border-bottom: 1px solid #fff8;
+    }
+  }
+
+  #goals {
+    @include margin();
+
+    border: 1px solid #fff4;
+    border-radius: 20px;
+    padding: 10px 20px 0 20px;
+    box-shadow:
+      0 3px 5px #000 inset,
+      0 0 10px #fff2;
+    background-color: #0002;
+
+    li {
+      display: block;
+      padding: 10px 0 10px 60px;
+      max-width: $max-width;
+      line-height: 1.5;
+      font-weight: 500;
+      font-family: $body-font;
+      font-size: 20px;
+      margin: 15px 0;
+      background: left top / calc(264px / 5) calc(228px / 5) no-repeat
+        url("/images/check.png");
+    }
+  }
+
+  @mixin result(
+    $align: left,
+    $imageName,
+    $imageHeight: 0,
+    $imageWidth: 0,
+    $height: 0
+  ) {
+    border-bottom: 1px solid #fff4;
+    box-shadow: 0 5px 5px #fff1;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+
+    p {
+      position: relative;
+      margin: auto;
+      margin-top: -20px;
+      max-width: $max-width;
+      background-repeat: no-repeat;
+      background: $align top / ($imageHeight * 0.5) ($imageWidth * 0.5)
+        no-repeat url("/images/" + $imageName + ".png");
+      height: $height * 0.5;
+      display: flex;
+      align-items: center;
+
+      @media (max-width: $max-width) {
+        background-size: ($imageHeight * 0.35) ($imageWidth * 0.35);
+        height: $height * 0.35;
+        padding: 0 20px;
+      }
+
+      @if $align == left {
+        justify-content: right;
+      } @else {
+        justify-content: left;
+      }
+
+      strong {
+        text-align: center;
+        max-width: 400px;
+        border: 1px solid #fff6;
+        border-radius: 10px;
+        box-shadow: 0 3px 5px #0006;
+        font-weight: bold;
+        padding: 10px 15px;
+        background-color: #0008;
+        backdrop-filter: blur(10px);
+      }
+    }
+  }
+
+  .result {
+    &#classes {
+      @include result(right, "classes", 1148px, 1082px, 800px);
+    }
+
+    &#npc {
+      @include result(left, "npc", 883px, 852px, 700px);
+    }
+
+    &#guide {
+      @include result(right, "guide", 987px, 807px, 700px);
+    }
+
+    &#inventory {
+      @include result(left, "inventory", 772px, 795px, 700px);
+    }
+
+    &#cards {
+      @include result(right, "cards", 924px, 681px, 600px);
+    }
+  }
+
+  #rules ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    &::before {
+      content: "Includes the rules for:";
+      padding: 5px 0;
+      margin: 0 7px 7px 0;
+      border: 1px solid #0000;
+      font-weight: 500;
+    }
+
+    li {
+      white-space: pre;
+      display: block;
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: 1px solid #fff6;
+      box-shadow:
+        0px 2px 5px #fff4 inset,
+        0 2px 2px #0008;
+      margin: 0 7px 7px 0;
+    }
+  }
+
+  #faq ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+}
