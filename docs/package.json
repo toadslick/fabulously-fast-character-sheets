@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx @11ty/eleventy --pathprefix 'fabulously-fast-character-sheets'",
+    "serve": "npx @11ty/eleventy --serve"
   },
   "keywords": [],
   "author": "",
