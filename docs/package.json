@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy --pathprefix 'fabulously-fast-character-sheets'",
+    "build": "env NODE_ENV=production npx @11ty/eleventy --pathprefix 'fabulously-fast-character-sheets'",
     "serve": "npx @11ty/eleventy --serve"
   },
   "keywords": [],
