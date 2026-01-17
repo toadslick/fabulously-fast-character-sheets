@@ -3,7 +3,9 @@ name: Build Static Site
 on:
   push:
     branches:
-      - master
+      - main
+    paths:
+      - "docs/**"
 
 jobs:
   build:
